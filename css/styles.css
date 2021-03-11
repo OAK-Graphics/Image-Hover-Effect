@@ -1,0 +1,107 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300&display=swap");
+*, *::before, *::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #f3f3f3;
+  color: #b37b37;
+  font-family: Poppins;
+  font-size: 0.75rem;
+  line-height: 1.25;
+  overflow-x: hidden;
+}
+
+.container {
+  padding: 0 1.5rem;
+  max-width: 63.975rem;
+  margin: 10rem auto 0;
+}
+
+.card {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 7fr 3fr;
+      grid-template-columns: 7fr 3fr;
+  -webkit-column-gap: 1.5rem;
+          column-gap: 1.5rem;
+}
+
+.card__list {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: (auto)[3];
+      grid-template-rows: repeat(3, auto);
+  row-gap: 1.5rem;
+}
+
+.card__item {
+  background-color: #f5e7d9;
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+  -webkit-transition: background-color 0.3s ease-in-out;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.card__item.active, .card__item:hover {
+  background-color: #d0b28f;
+}
+
+.card__item.active h2, .card__item.active p, .card__item:hover h2, .card__item:hover p {
+  color: #3e2e1b;
+}
+
+.card__item__title, .card__item__lead {
+  -webkit-transition: color 0.3s ease-in-out;
+  transition: color 0.3s ease-in-out;
+}
+
+.image {
+  background-color: #d0b28f;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+  border-radius: 0.5rem;
+}
+
+.image-1 {
+  background-image: url(https://images.pexels.com/photos/3032153/pexels-photo-3032153.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
+  opacity: 0;
+  -webkit-transition: opacity 0.3 ease-in-out;
+  transition: opacity 0.3 ease-in-out;
+}
+
+.image-1.active {
+  opacity: 1;
+}
+
+.image-2 {
+  background-image: url(https://images.pexels.com/photos/5776286/pexels-photo-5776286.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500);
+  opacity: 0;
+  -webkit-transition: opacity 0.3 ease-in-out;
+  transition: opacity 0.3 ease-in-out;
+}
+
+.image-2.active {
+  opacity: 1;
+}
+
+.image-2 {
+  background-image: url(https://images.pexels.com/photos/4985297/pexels-photo-4985297.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
+  opacity: 0;
+  -webkit-transition: opacity 0.3 ease-in-out;
+  transition: opacity 0.3 ease-in-out;
+}
+
+.image-2.active {
+  opacity: 1;
+}
+/*# sourceMappingURL=styles.css.map */

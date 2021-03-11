@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300&display=swap');
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: rgb(243, 243, 243);
+    color: rgb(179, 123, 55);
+    font-family: Poppins;
+    font-size: 0.75rem;
+    line-height: 1.25;
+    overflow-x: hidden;
+}
+
+.container {
+    padding: 0 1.5rem;
+    max-width: 63.975rem;
+    margin: 10rem auto 0;
+}
+
+.card {
+    display: grid;
+    grid-template-columns: 7fr 3fr;
+    column-gap: 1.5rem;
+
+    &__list {
+        display: grid;
+        grid-template-rows: repeat(3, auto);
+        row-gap: 1.5rem;
+    }
+
+    &__item {
+        background-color: rgb(245, 231, 217);
+        border-radius: 0.5rem;
+        padding: 1.5rem;
+        transition: background-color 0.3s ease-in-out;
+
+        &.active, &:hover {
+            background-color: rgb(208, 178, 143s);
+
+            h2, p {
+                color: rgb(62, 46, 27);
+            }
+
+        }
+
+        &__title, &__lead {
+            transition: color 0.3s ease-in-out;
+        }
+
+    }
+
+}
+
+.image {
+    background-color: rgb(208, 178, 143s);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+    border-radius: 0.5rem;
+
+    &-1 {
+        background-image: url(https://images.pexels.com/photos/3032153/pexels-photo-3032153.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
+        opacity: 0;
+        transition: opacity 0.3 ease-in-out;        
+
+        &.active {
+            opacity: 1;
+        }
+    }
+
+    &-2 {
+        background-image: url(https://images.pexels.com/photos/5776286/pexels-photo-5776286.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500);
+        opacity: 0;
+        transition: opacity 0.3 ease-in-out;        
+
+        &.active {
+            opacity: 1;
+        }
+    }
+
+    &-2 {
+        background-image: url(https://images.pexels.com/photos/4985297/pexels-photo-4985297.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
+        opacity: 0;
+        transition: opacity 0.3 ease-in-out;        
+
+        &.active {
+            opacity: 1;
+        }
+    }
+}
