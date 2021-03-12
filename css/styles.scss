@@ -21,7 +21,7 @@ body {
 .container {
     padding: 0 1.5rem;
     max-width: 63.975rem;
-    margin: 7.5rem auto;
+    margin: 5rem auto 5rem;
 }
 
 .card {
@@ -39,12 +39,10 @@ body {
         background-color: rgb(245, 231, 217);
         border-radius: 0.5rem;
         padding: 1.5rem;
-        box-shadow: rgba($color: #000000, $alpha: 0.075) 0 0.75rem 0.75rem -0.5rem;
-        transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+        transition: background-color 0.3s ease-in-out;
 
         &.active, &:hover {
             background-color: rgb(208, 178, 143s);
-            transform: scale(1.025);
 
             h2, p {
                 color: rgb(62, 46, 27);
@@ -73,13 +71,13 @@ body {
     width: 100%;
     height: 100%;
     border-radius: 0.5rem;
-    box-shadow: rgba($color: #000000, $alpha: 0.075) 0 0.75rem 0.75rem -0.5rem;
     top: 0;
     left: 0;
 
     &-1 {
         background-image: url(https://images.pexels.com/photos/3032153/pexels-photo-3032153.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
         opacity: 0;
+        transition: opacity 0.3 ease-in-out;        
 
         &.active {
             opacity: 1;
@@ -89,6 +87,7 @@ body {
     &-2 {
         background-image: url(https://images.pexels.com/photos/5776286/pexels-photo-5776286.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500);
         opacity: 0;
+        transition: opacity 0.3 ease-in-out;        
 
         &.active {
             opacity: 1;
@@ -98,51 +97,10 @@ body {
     &-3 {
         background-image: url(https://images.pexels.com/photos/4985297/pexels-photo-4985297.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
         opacity: 0;
+        transition: opacity 0.3 ease-in-out;        
 
         &.active {
             opacity: 1;
         }
-    }
-}
-
-.show {    
-    animation: show 0.75s ease-in-out forwards;
-}
-
-.hide {    
-    animation: hide 0.375s ease-in-out forwards;
-}
-
-@keyframes show {
-    0% {
-        // display: none;
-        opacity: 0;
-    }
-
-    // 1% {
-    //     display: block;
-    //     opacity: 0;
-    // }
-
-    100% {
-        // display: block;
-        opacity: 1;
-    }
-}
-
-@keyframes hide {
-    0% {
-        // display: none;
-        opacity: 1;
-    }
-
-    // 1% {
-    //     display: block;
-    //     opacity: 1;
-    // }
-
-    100% {
-        // display: block;
-        opacity: 0;
     }
 }
