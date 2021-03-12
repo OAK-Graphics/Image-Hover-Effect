@@ -21,17 +21,53 @@ body {
 .container {
     padding: 0 1.5rem;
     max-width: 63.975rem;
-    margin: 7.5rem auto;
+
+    @media (min-width: 64em) {
+        margin: 7.5rem auto;
+    }
+
+    @media (min-width: 40em) and (max-width: 63.9375em) {
+        margin: 15rem auto;
+    }
+
+    @media (max-width: 39.9375em) {
+        margin: 2.5rem auto;
+    }
 }
 
 .card {
     display: grid;
-    grid-template-columns: 7fr 3fr;
-    column-gap: 1.5rem;
 
-    &__list {
-        display: grid;
+    @media (min-width: 64em) {
+        grid-template-columns: 7fr 3fr;
         grid-template-rows: repeat(3, auto);
+        grid-template-areas: 
+        "C1 IM"
+        "C2 IM"
+        "C3 IM";
+        column-gap: 1.5rem;
+        row-gap: 1.5rem;
+    }    
+
+    @media (min-width: 40em) and (max-width: 63.9375em) {
+        grid-template-columns: 1fr 1fr;
+        grid-template-row: 1fr 1fr;
+        grid-template-areas: 
+        "C1 IM"
+        "C2 C3";
+        column-gap: 1.5rem;
+        row-gap: 1.5rem;
+    } 
+
+    @media (max-width: 39.9375em) {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(4, 1fr);
+        grid-template-areas: 
+        "IM"
+        "C1"
+        "C2"
+        "C3";
+        column-gap: 1.5rem;
         row-gap: 1.5rem;
     }
 
@@ -56,10 +92,23 @@ body {
             transition: color 0.3s ease-in-out;
         }
 
+        &:nth-child(1) {
+            grid-area: C1;
+        }
+
+        &:nth-child(2) {
+            grid-area: C2;
+        }
+
+        &:nth-child(3) {
+            grid-area: C3;
+        }
+
     }
 
     &__image {
         position: relative;
+        grid-area: IM;
     }
 
 }
