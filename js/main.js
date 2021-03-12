@@ -20,7 +20,7 @@ function cardHover(t){
 
     t.classList.add('active');
 
-    if (t = cardFirstChild) {
+    if (t == cardFirstChild) {
 
         cardImageAll.forEach(e => {
 
@@ -33,9 +33,11 @@ function cardHover(t){
 
         imageFirstChild.classList.add('active');
 
+        console.log(t);
+
     }
 
-    if (t = cardSecondChild) {
+    if (t == cardSecondChild) {
 
         cardImageAll.forEach(e => {
 
@@ -48,9 +50,11 @@ function cardHover(t){
 
         imageSecondChild.classList.add('active');
 
+        console.log(t);
+
     }
 
-    if (t = cardThirdChild) {
+    if (t == cardThirdChild) {
 
         cardImageAll.forEach(e => {
 
@@ -62,6 +66,8 @@ function cardHover(t){
         });
 
         imageThirdChild.classList.add('active');
+
+        console.log(t);
 
     }
 
