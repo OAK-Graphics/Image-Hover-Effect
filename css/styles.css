@@ -83,8 +83,6 @@ body {
         grid-template-areas: "C1"
  "C2"
  "C3";
-    -webkit-column-gap: 1.5rem;
-            column-gap: 1.5rem;
     row-gap: 1.5rem;
   }
 }
