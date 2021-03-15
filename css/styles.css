@@ -52,7 +52,9 @@ body {
         grid-template-columns: 7fr 3fr;
     -ms-grid-rows: (auto)[3];
         grid-template-rows: repeat(3, auto);
-        grid-template-areas: "C1 IM" "C2 IM" "C3 IM";
+        grid-template-areas: "C1 IM"
+ "C2 IM"
+ "C3 IM";
     -webkit-column-gap: 1.5rem;
             column-gap: 1.5rem;
     row-gap: 1.5rem;
@@ -64,7 +66,8 @@ body {
     -ms-grid-columns: 1fr 1fr;
         grid-template-columns: 1fr 1fr;
     grid-template-row: 1fr 1fr;
-        grid-template-areas: "C1 IM" "C2 C3";
+        grid-template-areas: "C1 IM"
+ "C2 C3";
     -webkit-column-gap: 1.5rem;
             column-gap: 1.5rem;
     row-gap: 1.5rem;
@@ -77,7 +80,9 @@ body {
         grid-template-columns: 1fr;
     -ms-grid-rows: (1fr)[4];
         grid-template-rows: repeat(4, 1fr);
-        grid-template-areas: "IM" "C1" "C2" "C3";
+        grid-template-areas: "C1"
+ "C2"
+ "C3";
     -webkit-column-gap: 1.5rem;
             column-gap: 1.5rem;
     row-gap: 1.5rem;
@@ -141,6 +146,10 @@ body {
           box-shadow: rgba(0, 0, 0, 0.075) 0 0.75rem 0.75rem -0.5rem;
   top: 0;
   left: 0;
+  
+  @media (max-width: 39.9375em) {
+    display: none;
+  }
 }
 
 .image-1 {
